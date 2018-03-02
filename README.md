@@ -12,6 +12,10 @@ account.  After entry, the script will iterate through all .xml files in the sam
 account.  After each DataSource Submission, the script will print the HTTP Response Code and Response Body.
 
 ### Python Configuration
+Let's open the Terminal!  Navigate to the top right hand side of your screen and click the magnifying glass.
 
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/magnifyingGlass.png)
 
-![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/DataSources.png)
+Type in "terminal" and open the application.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/terminal.png)
