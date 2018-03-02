@@ -49,3 +49,25 @@ Success!  Let's run the script!
 
 ### Script Execution
 
+First, place whichever version of the script is relevant (or both if you'd like) into the same folder as all of the
+DataSources that you would like to import into the customer account.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/folderView.png)
+
+To run the script first right click massImport_X.py and choose copy.  Then navigate back to the terminal and type
+`python ⌘v` which should paste the filepath of the script as seen in the image below.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/exampleInput.png)
+
+The script will prompt you for an LM Access ID, an LM Access Key, and a Trimmed Account Site.  The Access ID and Access Key
+must be created prior to script execution.  It is best practice to create an API specific user and spin up credentials for
+that user.
+
+Successful script execution will look like the below.  The script prints Response Code and Response Body into the terminal.
+In short, we definitely want a response code of 200.  If you see something else, [take a look at this website to learn more](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/successOutput.png)
+
+We've done it!  Let's check in the account to make sure they've been imported correctly:
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/DataSources.png)
