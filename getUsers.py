@@ -9,17 +9,15 @@ import hmac
 import os
 
 #Account Info
-
 AccessId = input("Enter LM Access ID: ")
 AccessKey = input("Enter LM Access Key: ")
 Company = input("Enter Account Site Trimmed: ")
-#AccessId ='dSpe6j9eTQXs3Iph7jCU'
-#AccessKey ='dcm!p2d2w79V=5f}+[354xL=g{k442Y6h5qV}C_6'
-#Company = 'ianbloom'
 
-#Initialize fileArray variable to hold filepath for all dataSources
+#Change Working Directory to where this script is located
 os.chdir(os.path.dirname(__file__))
 currentWorkingDirectory = os.getcwd()
+
+#Initialize fileArray variable to hold filepath for all dataSources
 fileArray = []
 hmacArray = []
 
@@ -30,6 +28,7 @@ for filename in os.listdir(currentWorkingDirectory):
 	else:
 		continue
 
+#Iterate through the dataSources and add each to LM
 for i in range(len(fileArray)):
 	#File Information
 	fileName = fileArray[i]
@@ -57,6 +56,7 @@ Content-Type: text/xml
 	#Concatenate Request details
 	requestVars = httpVerb + epoch + data + resourcePath
 
+	#Construct signature
 	hmacArray.append(hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest())
 	signature = base64.b64encode(hmacArray[i].encode())
 
@@ -65,10 +65,6 @@ Content-Type: text/xml
 	headers = {'Content-Type':'multipart/form-data; boundary=----WebKitFormBoundary12345BUlKhOAAA1X','Authorization':auth}
 
 	#Make request
-	#print('url= ', url)
-	#print('data=', data)
-	#print('headers= ', headers)
-
 	response = requests.post(url, data=data, headers=headers)
 
 	#Print status and body of response
