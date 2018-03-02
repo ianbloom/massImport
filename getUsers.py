@@ -9,9 +9,9 @@ import hmac
 import os
 
 #Account Info
-AccessId = input("Enter LM Access ID: ")
-AccessKey = input("Enter LM Access Key: ")
-Company = input("Enter Account Site Trimmed: ")
+AccessId = raw_input("Enter LM Access ID: ")
+AccessKey = raw_input("Enter LM Access Key: ")
+Company = raw_input("Enter Account Site Trimmed: ")
 
 #Change Working Directory to where this script is located
 os.chdir(os.path.dirname(__file__))
