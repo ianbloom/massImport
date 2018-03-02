@@ -10,14 +10,15 @@ import os
 
 #Account Info
 
-#AccessId = input("Enter LM Access ID: ")
-#AccessKey = input("Enter LM Access Key: ")
-#Company = input("Enter Account Site Trimmed: ")
-AccessId ='dSpe6j9eTQXs3Iph7jCU'
-AccessKey ='dcm!p2d2w79V=5f}+[354xL=g{k442Y6h5qV}C_6'
-Company = 'ianbloom'
+AccessId = input("Enter LM Access ID: ")
+AccessKey = input("Enter LM Access Key: ")
+Company = input("Enter Account Site Trimmed: ")
+#AccessId ='dSpe6j9eTQXs3Iph7jCU'
+#AccessKey ='dcm!p2d2w79V=5f}+[354xL=g{k442Y6h5qV}C_6'
+#Company = 'ianbloom'
 
 #Initialize fileArray variable to hold filepath for all dataSources
+os.chdir(os.path.dirname(__file__))
 currentWorkingDirectory = os.getcwd()
 fileArray = []
 hmacArray = []
