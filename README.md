@@ -9,7 +9,7 @@ configured via the steps in this guide, it is simple to run the script going for
 
 When the script is run, it will prompt the user for API credentials and a trimmed account site for the desired customer
 account.  After entry, the script will iterate through all .xml files in the same folder and import them into the customer
-account.  After each DataSource Submission, the script will print the HTTP Response Code and Response Body.
+account.  After each DataSource submission, the script will print the HTTP Response Code and Response Body.
 
 ### Python Configuration
 Let's open the Terminal!  Navigate to the top right hand side of your screen and click the magnifying glass.
@@ -55,7 +55,8 @@ DataSources that you would like to import into the customer account.
 ![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/folderView.png)
 
 To run the script first right click massImport_X.py and choose copy.  Then navigate back to the terminal and type
-`python ⌘v` which should paste the filepath of the script as seen in the image below.
+`python ⌘v` which should paste the filepath of the script as seen in the image below.  (Note: I wrote python2.7 in the image
+below because I have multiply python versions installed and needed to test them all.)
 
 ![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/exampleInput.png)
 
