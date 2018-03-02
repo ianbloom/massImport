@@ -34,3 +34,18 @@ If your output does not look like the above, then install pip by typing `sudo ea
 
 ![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/pipInstall.png)
 
+Next, we install requests, our only dependency.  We need requests to make HTTP requests (like the ones we will make 
+to the LM API).
+
+Type `sudo pip install requests` into the terminal.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/requestsInstall.png)
+
+The output should look something like the below.  If you have any trouble with any of these steps, please contact me.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/requestsOutput.png)
+
+Success!  Let's run the script!
+
+### Script Execution
+
