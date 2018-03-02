@@ -19,3 +19,18 @@ Let's open the Terminal!  Navigate to the top right hand side of your screen and
 Type in "terminal" and open the application.
 
 ![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/terminal.png)
+
+First we need to verify if Python is installed, and if it is, what version is installed.  In the terminal type `python -V`.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/pythonVersion.png)
+
+Your Python will either be version 2.XX or 3.XX, which will determine which version of massImport_X.py you will run.
+
+We need to check if pip is already installed as well.  Type `pip --version` in your terminal.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/pipVersion.png)
+
+If your output does not look like the above, then install pip by typing `sudo easy_install pip`.
+
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/pipInstall.png)
+
