@@ -51,7 +51,7 @@ Success!  Let's run the script!
 
 First, place whichever version of the script is relevant (or both if you'd like) into the CS Toolkit folder as seen below.
 
-![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/folderView.png)
+![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/folderView2.png)
 
 To run the script first right click massImport_X.py and choose copy.  Then navigate back to the terminal and type
 `python ⌘v` which should paste the filepath of the script as seen in the image below.  (Note: I wrote python2.7 in the image
