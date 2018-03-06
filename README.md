@@ -49,8 +49,7 @@ Success!  Let's run the script!
 
 ### Script Execution
 
-First, place whichever version of the script is relevant (or both if you'd like) into the same folder as all of the
-DataSources that you would like to import into the customer account.
+First, place whichever version of the script is relevant (or both if you'd like) into the CS Toolkit folder.
 
 ![Optional Text](https://github.com/ianbloom/massImport/blob/looper/readmeImages/folderView2.png)
 
