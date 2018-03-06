@@ -2,7 +2,7 @@
 
 ### Introduction
 I wrote this Python script as a tool for the LogicMonitor Customer Success Team to simplify the process of bulk adding
-DataSources into customer accounts.
+LogicModules and applying necessary root level properties in customer accounts.
 
 This README is designed to be followed by users of any technical ability.  After the user's Python environment is properly
 configured via the steps in this guide, it is simple to run the script going forward.
