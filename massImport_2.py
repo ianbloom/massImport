@@ -7,6 +7,7 @@ import base64
 import time
 import hmac
 import os
+import json as _json
 
 #Collect account info from user
 AccessId = raw_input("Enter LM Access ID: ")
@@ -201,3 +202,44 @@ Content-Type: multipart/form-data
 	print('Response Status:',response.status_code)
 	print('Response Body:',response.content)
 	print('\n')
+
+##############################
+###                        ###
+###   DEAD DEVICES GROUP   ###
+###                        ###
+##############################
+
+print('DEAD DEVICES GROUP\n')
+
+# Build a dictionary to circumvent quotation mark escaping difficulties with AppliesTo statement
+jsonDict = {}
+jsonDict["name"] = "Dead Devices"
+jsonDict["appliesTo"] = "auto.device_state =~ \"dead\""
+data = _json.dumps(jsonDict, ensure_ascii=False)
+
+httpVerb ='POST'
+resourcePath = '/device/groups'
+#Construct URL 
+url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
+
+#Get current time in milliseconds
+epoch = str(int(time.time() * 1000))
+
+#Concatenate Request details
+requestVars = httpVerb + epoch + data + resourcePath
+
+#Construct signature
+step1 = hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest()
+signature = base64.b64encode(step1.encode())
+
+#Construct headers
+auth = 'LMv1 ' + AccessId + ':' + signature.decode() + ':' + epoch
+headers = {'Content-Type':'application/json','Authorization':auth}
+
+#Make request
+response = requests.post(url, data=data, headers=headers)
+
+#Print status and body of response
+print('Response Status:',response.status_code)
+print('Response Body:',response.content)
+
